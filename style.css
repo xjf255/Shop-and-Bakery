@@ -1,0 +1,324 @@
+:root{
+    --gris: #b4ababb7;
+    --naranja: rgba(244, 205, 146, 0.981);}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.header{
+    background-color: var(--naranja);
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header .header_name{
+    /* background-color: red;  */
+    width: 40vw;
+    text-align: center;
+    cursor: pointer;
+}
+.header .header_name h2{
+    font-size: 2rem;
+}
+.header .line{
+    border: 1px solid #000;
+}
+.navigator{
+    background-color: #fff;
+    height: 8vh;
+    width: 100%;
+    opacity: 1;
+    position:sticky;
+    top: 0px;
+    box-shadow: 0 0.6px 0px 1px #b5aeb8de;
+}
+.navigator i{
+    display: none;
+}
+.nav_main{
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.nav_menu li{
+    display: inline-block;
+    height: 100%;
+    /* padding: 0 8px; */
+    margin: 0 15px;
+    /* background-color: blue; */
+}
+.navigator .nav_main .nav_menu li:hover{
+    background-color: var(--gris);
+}
+.navigator .nav_main .nav_menu li a{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+}
+.toggle{
+    font-size: 30px;
+    cursor: pointer;
+    transform: rotate(90deg);
+    display: none;
+}
+.us{
+    /* background-color: red; */
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 0px;
+    width: 100%;
+    height: calc(100vh-15vh);
+    display: grid;
+    grid-template-areas:
+    "nosotros perfil";
+
+    grid-template-columns: 80% calc(20%-20px);
+}
+.container{
+    /* width: 80%; */
+    height: 450px;
+    /* background-color: red; */
+    grid-area: nosotros;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.text_about-us{
+    padding: 0px 50px;
+    text-align:center;
+} 
+/*#mision{
+    padding: 0px 50px;
+}
+#vision{
+     padding: 0px 50px; 
+}*/
+#profile{
+    /* width: 20%; */
+    margin-right: 20px;
+    /* background-color:rgba(110, 108, 108, 0.137); */
+    /* opacity: 0.8; */
+    grid-area: perfil;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.user{
+    width: 250px;
+    align-self: center;
+    box-shadow: 0 0.6px 0px 1px #e8ddedde;
+}
+.text_about-us{
+    align-self: center;
+}
+.home{
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 10%;
+    grid-template-areas: "normal especialidades";
+}
+.cards{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--naranja);
+}
+.cards:first-child{
+    grid-area: "normal";
+    background-color: var(--gris);
+}
+.cards:nth-child(2){
+    grid-area: "especialidades";
+}
+.server{
+    height: 92vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.server_all{
+    height: 20%;
+    width: 50%;
+    /* background-color:aqua; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.server_descripcion{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    gap: 10px;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+.server_contacto{
+    /* width: 40%; */
+    padding: 4px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0.6px 0px 1px #b5aeb8de;
+    background-color: rgb(16, 181, 16);
+}
+.server_contacto:hover{
+    background-color: var(--gris);
+    box-shadow: 0 0.6px 0px 1px #b5aeb8de;
+}
+#server_contacto_whats{
+    height: 50px;
+    width: 50px;
+}
+.header-footer{
+    /* background-color: var(--gris); */
+    background-color: #090909ee;
+    color: #fff;
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.header-footer_name{
+    width: 50%;
+    margin-top: 30px;
+    text-align: center;
+}
+.header-footer_contact{
+    text-align: center;
+}
+.developer-info{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    opacity: 0.5;
+}
+
+@media only screen and (max-width: 600px){
+    .header{
+        height: 20vh;
+        width: 100vw;
+    }
+    .header h2{
+        font-size: 1rem;
+    }
+    .navigator{
+        width: 100vw;
+    }
+    .nav_main{
+        position: relative;
+        width: 100vw;
+        width: 100vw;
+        display: flex;
+        justify-content: space-between;
+        /* top: -15vh; */
+    }
+    .nav_menu{
+        width: 100vw;
+        height: 100vh;
+        background: #fffefe;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        transition: .8s;
+        left: -200vw;
+    }
+    .nav_menu-active{
+        position: relative;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: #fffefe;
+        display: flex;
+        flex-direction: column;
+        z-index: 10;
+        transition: .5s;
+    }
+    .nav_menu li{
+        height: 20vh;
+        width: 100%;
+        display:flex;
+        flex-direction: column;
+        /* align-items: center; */
+        /* margin: 0; */
+        margin: 0 0;
+        border-bottom: 1px dashed black;
+        box-shadow: 0 0.4px 0px 1px #b5aeb8de;
+        left: 0;
+    }
+    .nav_menu li a{
+        font: 1.2em sans-serif;
+        width: 100%;
+        position: relative;
+        padding-left:20px;
+    }
+    .navigator .nav_main .nav_menu li:hover{
+        background-color: var(--gris);
+    }
+    .toggle{
+        position: absolute;
+        right: 0;
+        top: 10px;
+        margin-right: 15px;
+        display: flex;
+        justify-content: end;
+        z-index: 100;
+        transition: 0.5s;
+    }
+    .toggle-active{
+        transform: rotate(180deg);
+        transition: 0.5s;
+        position: absolute;
+        margin: 05px 05px 0 0;
+        top: 0px;
+        right: 0px;
+    }
+    .us{
+        grid-template-areas: 
+        "nosotros nosotros nosotros"
+        ". perfil .";
+        padding-top: 4vh;
+    }
+    .user{
+        width: 50%;
+    }
+    .container{
+        width: 100vw;
+        padding: 0 auto;
+    }
+    #profile{
+        display: flex;
+        flex-direction: row-reverse;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+    .home{
+        height: calc(100vh-20px);
+        width: 100vw;
+        gap: 20px;
+        grid-template-areas: 
+        "normal"
+        "especialidades";
+    }
+    .server{
+        width: 100vw;
+    }
+    .header-footer{
+        width: 100vw;
+        height: 50vh;
+    }
+}
